@@ -4,6 +4,7 @@
 ##### Employee and Customer details manipulation using CRUD features.
 ##### Dark and Light theme with color picker tool, to use application in desired color.
 
+<a href="https://shoppy-admin-dash.netlify.app/">Check out the app here</a> 
 
 
 <a href="#"><img src="src/data/ss1.png" width=1020px ></a>
