@@ -2,6 +2,7 @@
 
 ##### Consists of Orders page, Employee details page, Calendar, Kanban, Charts and more.
 ##### Employee and Customer details manipulation using CRUD features.
+##### Dark and Light theme with color picker tool, to use application in desired color.
 
 
 
