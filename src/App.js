@@ -12,15 +12,15 @@ import { Theme } from '@syncfusion/ej2-react-charts';
 
 const App = () => {
 
-    const {activeMenu, themeSettings, setThemeSettings, currentColor} = useStateContext();
+    const {activeMenu, themeSettings, setThemeSettings, currentColor,currentMode} = useStateContext();
 
     return (
-        <div>
+        <div className={currentMode === 'Dark' ? 'dark' : ''}> 
             <BrowserRouter>
             <div className='flex relative dark:bg-main-dark-bg'>
                 <div className='fixed right-4 bottom-4' style={{zIndex:"1000"}}>
                     <TooltipComponent content='Settings' position='top'>
-                        <button type='button' className='text-3xl p-3 hover: drop-shadow-xl hover: bg-light-gray text-white' onClick={() => setThemeSettings(true) } style={{background : 'blue', borderRadius: '50%'}}>
+                        <button type='button' className='text-3xl p-3 hover: drop-shadow-xl hover: bg-light-gray text-white' onClick={() => setThemeSettings(true) } style={{background : currentColor, borderRadius: '50%'}}>
                             <FiSettings />
                         </button>
                     </TooltipComponent>
@@ -34,9 +34,12 @@ const App = () => {
                         <Sidebar />
                     </div>
                 )}
-                <div className={` ${activeMenu ? 'md:ml-72' : 'flex-2'}`
-                    
-                    // activeMenu ? 'dark:bg-main-bg bg-main-bg min-h-screen md:ml-72 w-full' : 'dark:bg-main-bg bg-main-bg min-h-screen flex-2 w-full'  *****Template Literal*****
+                <div className={` dark:bg-main-bg bg-main-bg min-h-screen
+                ${activeMenu 
+                    ? 'md:ml-72' 
+                    : 'flex-2'}`
+                    //  *****Template Literal*****
+                    // activeMenu ? 'dark:bg-main-bg bg-main-bg min-h-screen md:ml-72 w-full' : 'dark:bg-main-bg bg-main-bg min-h-screen flex-2 w-full' 
                 }
                     >
                     <div className='fixed md-static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
