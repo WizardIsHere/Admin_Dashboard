@@ -1,4 +1,7 @@
-##Using React with Syncfunction created an Admin Dashboard application.
+## Using React with Syncfunction created an Admin Dashboard application.
+
+##### Consists of Orders page, Employee details page, Calendar, Kanban, Charts and more.
+##### Employee and Customer details manipulation using CRUD features.
 
 
 
